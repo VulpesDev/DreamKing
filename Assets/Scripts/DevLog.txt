@@ -1,0 +1,48 @@
+Problem: 
+V   Forward is Camera Forward NOT A PROBLEM FOR NOW
+V   Vignette lower A LOT DONE
+V   Jump automatically when maxed
+V   Decrease shake effect
+
+V    Bounce has to be dependent of the position of the wall  
+V    Terminate first bounce without reason
+V    Maybe lower the inverse y force when hitting his head
+V    Sometimes inverse y force doesn't work as expected
+
+
+Optimize code (remove coroutines somehow) // AJ
+
+V Sensitivity script  // NOW 20min
+V Menu scene connection // NOW 10min
+V Menu music and sound effects // Tomorrow IMPORTANT 30min
+
+V Corridor fix // Tomorrow IMPORTANT 5 min
+
+V Timeline cutscene // Tomorrow 1h  8:50 - 9:50
+
+V Cutscene music and sound effects // Tomorrow  15min 10:05
+
+V Add lanterns // Tomorrow 10min 10:10 - 10:20
+
+V Voice Lines // Tomorrow 1h 10:30 - 11:30
+
+V add pickle // Tomorrow 5min
+
+V Wayne animations // 20 min 11:00 - 11:20
+
+V game end screen // Tomorrow 20min 11:20 - 11:40
+
+R Screach sound Main Menu or smth // 10 min 11:50 - 12:00
+
+V Add Ropes // 20 min 12:00 - 12:20
+
+V Lights just go off
+Brightness Option
+V Loop Music
+
+add cube collider to eliminate bounce down.
+
+
+Ideas:
+V  Never ending corridor with the breakfast in the end
+running breakfast
