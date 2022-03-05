@@ -26,8 +26,6 @@ public class Character : MonoBehaviour
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
 
-    public static float brightness = 0.25f;
-
     [HideInInspector]
     public bool canMove = true;
     [HideInInspector]
@@ -35,7 +33,6 @@ public class Character : MonoBehaviour
 
     void Start()
     {
-        RenderSettings.ambientLight = new Color(brightness, brightness, brightness, 1.0f);
         //Application.targetFrameRate = 60;
         characterController = GetComponent<CharacterController>();
 
@@ -164,6 +161,7 @@ public class Character : MonoBehaviour
         }
     }
 
+    public static float gammaValue = 0.65f;
     void Effects()
     {
         Volume vol = GameObject.Find("Volume").GetComponent<Volume>();
@@ -172,6 +170,11 @@ public class Character : MonoBehaviour
         {
             Vignette vignette = vignette2;
             vignette.intensity.Override(charge / 3f);
+        }
+        if(vol.profile.TryGet(out ColorAdjustments _colAdj))
+        {
+            ColorAdjustments colAdj = _colAdj;
+            colAdj.postExposure.Override(gammaValue);
         }
 
     }
