@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     void Start()
     {
         SetSensitivity();
+        SetGamma();
     }
 
     public static void LoadScene(int index)
@@ -21,6 +22,14 @@ public class MenuManager : MonoBehaviour
     {
         sensValue = sensSlider.value;
         Character.lookSpeed = sensValue;
+    }
+    float gammaValue;
+    [SerializeField] Slider gammaSlider;
+    public void SetGamma()
+    {
+        gammaValue = gammaSlider.value;
+        RenderSettings.ambientLight = new Color(gammaValue, gammaValue, gammaValue, 1.0f);
+        Character.brightness = gammaValue;
     }
 
 }
