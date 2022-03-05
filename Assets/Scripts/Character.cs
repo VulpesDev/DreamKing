@@ -26,6 +26,8 @@ public class Character : MonoBehaviour
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
 
+    public static float brightness = 0.25f;
+
     [HideInInspector]
     public bool canMove = true;
     [HideInInspector]
@@ -33,6 +35,7 @@ public class Character : MonoBehaviour
 
     void Start()
     {
+        RenderSettings.ambientLight = new Color(brightness, brightness, brightness, 1.0f);
         //Application.targetFrameRate = 60;
         characterController = GetComponent<CharacterController>();
 
