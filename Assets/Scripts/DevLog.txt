@@ -45,8 +45,10 @@ V Music Option
 
 V- Lights light up sequence
 
-Organise folders
-Organise Scenes
+V Organise folders
+V Organise Scenes
+
+Lower Light turn on sound
 
 
 Ideas:
