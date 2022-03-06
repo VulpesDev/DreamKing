@@ -10,8 +10,6 @@ V    Maybe lower the inverse y force when hitting his head
 V    Sometimes inverse y force doesn't work as expected
 
 
-Optimize code (remove coroutines somehow) // AJ
-
 V Sensitivity script  // NOW 20min
 V Menu scene connection // NOW 10min
 V Menu music and sound effects // Tomorrow IMPORTANT 30min
@@ -37,10 +35,18 @@ R Screach sound Main Menu or smth // 10 min 11:50 - 12:00
 V Add Ropes // 20 min 12:00 - 12:20
 
 V Lights just go off
-Brightness Option
+V Brightness Option
 V Loop Music
 
+Optimize code (remove coroutines somehow) // AJ
+Optimize MenuManager.cs
 add cube collider to eliminate bounce down.
+Music Option
+
+V- Lights light up sequence
+
+Organise folders
+Organise Scenes
 
 
 Ideas:

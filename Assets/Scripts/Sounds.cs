@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Sounds
 {
@@ -27,6 +28,7 @@ public class Sounds
         AudioSource as_as = as_go.AddComponent<AudioSource>();
         as_as.clip = clip; as_as.Play(); as_go.AddComponent<DestroyAfterMusic>();
         as_as.volume = volume;
+        as_as.outputAudioMixerGroup = Resources.Load<AudioMixerGroup>("Master");
         GameObject.Instantiate(as_go);
     }
 }
