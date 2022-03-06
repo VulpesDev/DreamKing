@@ -39,14 +39,16 @@ V Brightness Option
 V Loop Music
 
 Optimize code (remove coroutines somehow) // AJ
-Optimize MenuManager.cs
 add cube collider to eliminate bounce down.
-Music Option
+
+V Music Option
 
 V- Lights light up sequence
 
-Organise folders
-Organise Scenes
+V Organise folders
+V Organise Scenes
+
+Lower Light turn on sound
 
 
 Ideas:
