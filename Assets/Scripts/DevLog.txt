@@ -50,6 +50,13 @@ V Organise Scenes
 
 Lower Light turn on sound
 
+Change Jump Sound
+
+Start room tweak
+
+Add John's voice lines
+Add more Wayne voice lines
+
 
 Ideas:
 V  Never ending corridor with the breakfast in the end

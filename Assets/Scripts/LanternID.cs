@@ -7,6 +7,8 @@ public class LanternID : MonoBehaviour
     Renderer _renderer;
     Vector4 startColor;
     MaterialPropertyBlock _propBlock;
+
+    public bool lit;
     void Start()
     {
         _renderer = transform.GetChild(0).GetComponent<Renderer>();
@@ -18,6 +20,8 @@ public class LanternID : MonoBehaviour
 
     public void TurnLightOff()
     {
+        lit = false;
+
         //change emission intensity
         _renderer.GetPropertyBlock(_propBlock);
         _propBlock.SetColor("_EmissionColor", startColor * 0f);
@@ -30,6 +34,8 @@ public class LanternID : MonoBehaviour
     }
     public void TurnLightOn()
     {
+        lit = true;
+
         GetComponent<AudioSource>().Play();
 
         //change emission intensity
