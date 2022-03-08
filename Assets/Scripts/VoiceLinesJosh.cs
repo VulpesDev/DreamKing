@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VoiceLines : MonoBehaviour
+public class VoiceLinesJosh : MonoBehaviour
 {
+    // line [0,4] - tutorial
     int lineCount = 0;
     AudioSource asource;
-    string[] clipsDir = new string[] { "Sounds/VoiceLines/Wayne/Hey!", "Sounds/VoiceLines/Wayne/LegendaryPickle",
-    "Sounds/VoiceLines/Wayne/ManyPeople", "Sounds/VoiceLines/Wayne/youDoIt", "Sounds/VoiceLines/Wayne/ActTutorial",
-    "Sounds/VoiceLines/Wayne/BackInMyDay", "Sounds/VoiceLines/Wayne/WorldRecord"};
+    public AudioClip[] clipsDir;
     void Start()
     {
         asource = GetComponent<AudioSource>();
@@ -21,12 +20,22 @@ public class VoiceLines : MonoBehaviour
         float distance = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position);
         if(!asource.isPlaying && lineCount < clipsDir.Length && distance < 7f)
         {
-            asource.clip = Resources.Load<AudioClip>(clipsDir[lineCount]);
-            yield return new WaitForSeconds(1f);
-            asource.Play();
-            lineCount++;
+            if(lineCount < NemoNestCounter.counter || lineCount == 4)
+            {
+                StartCoroutine(PlayLine());
+            }
         }
+        yield return new WaitForSeconds(1.1f);
         yield return new WaitForFixedUpdate();
         StartCoroutine(CheckSentences());
     }
+    IEnumerator PlayLine()
+    {
+        Debug.Log(lineCount);
+        asource.clip = clipsDir[lineCount];
+        yield return new WaitForSeconds(1f);
+        asource.Play();
+        lineCount++;
+    }
 }
+
