@@ -9,6 +9,7 @@ public class NemoNestCounter : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            if(VoiceLinesJosh.lineCount >= counter)
             counter++;
         }
     }

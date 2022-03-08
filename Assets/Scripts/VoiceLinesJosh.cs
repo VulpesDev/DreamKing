@@ -5,7 +5,7 @@ using UnityEngine;
 public class VoiceLinesJosh : MonoBehaviour
 {
     // line [0,4] - tutorial
-    int lineCount = 0;
+    public static int lineCount = 0;
     AudioSource asource;
     public AudioClip[] clipsDir;
     void Start()
