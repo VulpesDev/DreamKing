@@ -1,3 +1,4 @@
+v0.1 --------------------------------------------------
 Problem: 
 V   Forward is Camera Forward NOT A PROBLEM FOR NOW
 V   Vignette lower A LOT DONE
@@ -34,19 +35,20 @@ R Screach sound Main Menu or smth // 10 min 11:50 - 12:00
 
 V Add Ropes // 20 min 12:00 - 12:20
 
+v0.2 --------------------------------------------------
+
 V Lights just go off
 V Brightness Option
 V Loop Music
-
-Optimize code (remove coroutines somehow) // AJ
-add cube collider to eliminate bounce down.
-
 V Music Option
 
-V- Lights light up sequence
+V Lights light up sequence
 
 V Organise folders
 V Organise Scenes
+
+Optimize code (remove coroutines somehow) // AJ
+add cube collider to eliminate bounce down.
 
 Lower Light turn on sound
 
