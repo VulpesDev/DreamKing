@@ -50,14 +50,14 @@ V Organise Scenes
 Optimize code (remove coroutines somehow) // AJ
 add cube collider to eliminate bounce down.
 
-Lower Light turn on sound
+V Lower Light turn on sound
 
 Change Jump Sound
 
-Start room tweak
+V Start room tweak
 
-Add John's voice lines
-Add more Wayne voice lines
+V Add John's voice lines
+V Add more Wayne voice lines
 
 
 Ideas:
