@@ -12,10 +12,6 @@ public class Zone : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-<<<<<<< HEAD
-=======
-        Debug.Log("In!");
->>>>>>> 5116a5dde9da69bceb361b49fe4c9a608754f9d5
         if (other.gameObject.CompareTag("Player") && !activeZone)
         {
             activeZone = true;
