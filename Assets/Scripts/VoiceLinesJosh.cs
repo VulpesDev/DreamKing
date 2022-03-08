@@ -31,7 +31,6 @@ public class VoiceLinesJosh : MonoBehaviour
     }
     IEnumerator PlayLine()
     {
-        Debug.Log(lineCount);
         asource.clip = clipsDir[lineCount];
         yield return new WaitForSeconds(1f);
         asource.Play();
