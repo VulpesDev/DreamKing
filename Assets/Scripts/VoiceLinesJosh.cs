@@ -4,37 +4,83 @@ using UnityEngine;
 
 public class VoiceLinesJosh : MonoBehaviour
 {
-    // line [0,4] - tutorial
-    public static int lineCount = 0;
+    public AudioClip[] clipsTutorial;
+    public AudioClip[] introDuction;
+    public AudioClip[] randomClips;
+    public AudioClip theWayBack;
+    public AudioClip theWrongWayBack;
     AudioSource asource;
-    public AudioClip[] clipsDir;
-    void Start()
+    bool wrongWay;
+    int introLines = 0;
+    int tutorialLines = 0;
+    public static bool introLinesB;
+    bool tutorial = true;
+    bool theWayBackTutorial;
+
+    private void Start()
     {
         asource = GetComponent<AudioSource>();
-        lineCount = 0;
-        StartCoroutine(CheckSentences());
+        StartCoroutine(CustomUpdate());
     }
 
-    IEnumerator CheckSentences()
+    IEnumerator CustomUpdate()
     {
         float distance = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position);
-        if(!asource.isPlaying && lineCount < clipsDir.Length && distance < 7f)
+        if (distance <= 7f && !asource.isPlaying)
         {
-            if(lineCount < NemoNestCounter.counter || lineCount == 4)
+            if (NemoNestCounter.passed)
             {
-                StartCoroutine(PlayLine());
+                if (introLines < introDuction.Length)
+                {
+                    if (introLines == 1 && !theWayBackTutorial)
+                    {
+                        theWayBackTutorial = true;
+                        StartCoroutine(PlayLine(theWayBack));
+                    }
+                    else
+                    {
+                        if (introLinesB)
+                        {
+                            StartCoroutine(PlayLine(introDuction[introLines]));
+                            introLines++;
+                            introLinesB = false;
+                        }
+
+                    }
+                }
+                else
+                {
+                    if(Zone.maxZoneID < 12 && introLinesB && tutorialLines < clipsTutorial.Length)
+                    {
+                        StartCoroutine(PlayLine(clipsTutorial[tutorialLines]));
+                        tutorialLines++;
+                    }
+                    else if (introLinesB)
+                    {
+                        int r = Random.Range(0, randomClips.Length);
+                        StartCoroutine(PlayLine(randomClips[r]));
+                        introLinesB = false;
+                    }
+                }
+            }
+            else
+            {
+                if (!wrongWay && !asource.isPlaying)
+                {
+                    wrongWay = true;
+                    StartCoroutine(PlayLine(theWrongWayBack));
+                }
             }
         }
+
         yield return new WaitForSeconds(1.1f);
-        yield return new WaitForFixedUpdate();
-        StartCoroutine(CheckSentences());
+        StartCoroutine(CustomUpdate());
     }
-    IEnumerator PlayLine()
+    IEnumerator PlayLine(AudioClip clip)
     {
-        asource.clip = clipsDir[lineCount];
-        yield return new WaitForSeconds(1f);
+        asource.clip = clip;
+        yield return new WaitForSeconds(0.5f);
         asource.Play();
-        lineCount++;
     }
 }
 

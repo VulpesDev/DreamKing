@@ -48,11 +48,10 @@ V Organise folders
 V Organise Scenes
 
 Optimize code (remove coroutines somehow) // AJ
-add cube collider to eliminate bounce down.
+Change Jump Sound
+Texture corridor too small scale
 
 V Lower Light turn on sound
-
-Change Jump Sound
 
 V Start room tweak
 
