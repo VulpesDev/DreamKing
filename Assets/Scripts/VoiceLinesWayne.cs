@@ -26,7 +26,7 @@ public class VoiceLinesWayne : MonoBehaviour
     IEnumerator CheckSentences()
     {
         float distance = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position);
-        if(!asource.isPlaying  && distance < 7f)
+        if(!asource.isPlaying  && distance < 8f)
         {
             if (lineCount >= 0 && lineCount <= 4 && lineCount < clipsDir.Length)
             {

@@ -49,6 +49,7 @@ V Organise Scenes
 
 Optimize code (remove coroutines somehow) // AJ
 Change Jump Sound
+Texture corridor too small scale
 
 V Lower Light turn on sound
 
