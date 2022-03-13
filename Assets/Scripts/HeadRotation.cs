@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeadRotationJosh : MonoBehaviour
+public class HeadRotation : MonoBehaviour
 {
     GameObject player;
     // Start is called before the first frame update
