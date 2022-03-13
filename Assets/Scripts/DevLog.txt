@@ -52,6 +52,7 @@ Change Jump Sound
 Texture corridor too small scale
 Change start room in level scene
 Don't forget OC in the end Ceco
+Main Menu UI sizing fix
 
 V Lower Light turn on sound
 
