@@ -20,7 +20,7 @@ public class VoiceLinesWayne : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(Zone.curZoneID > 2)
+        if(Zone.curZoneID > 1)
         fallPotential = true;
     }
     IEnumerator CheckSentences()
@@ -50,11 +50,16 @@ public class VoiceLinesWayne : MonoBehaviour
             }
             else if(fallPotential)
             {
-                asource.clip = randomClips[Random.Range(0, randomClips.Length)];
-                asource.Play();
-                fallPotential = false;
+                int r = Random.Range(0, 3);
+                if (r == 0 || r == 1)
+                {
+                    asource.clip = randomClips[Random.Range(0, randomClips.Length)];
+                    asource.Play();
+                }
             }
-            
+            fallPotential = false;
+            Zone.curZoneID = 0;
+
         }
         yield return new WaitForSeconds(1.1f);
         yield return new WaitForFixedUpdate();

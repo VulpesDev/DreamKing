@@ -14,7 +14,6 @@ public class VoiceLinesJosh : MonoBehaviour
     int introLines = 0;
     int tutorialLines = 0;
     public static bool introLinesB;
-    bool tutorial = true;
     bool theWayBackTutorial;
 
     private void Start()
