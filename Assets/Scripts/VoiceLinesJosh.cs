@@ -16,15 +16,31 @@ public class VoiceLinesJosh : MonoBehaviour
     public static bool introLinesB;
     bool theWayBackTutorial;
 
+    public Light lanternLight;
+    bool sound = false;
+
     private void Start()
     {
         asource = GetComponent<AudioSource>();
+        distance = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position);
         StartCoroutine(CustomUpdate());
+    }
+    float distance;
+    private void FixedUpdate()
+    {
+        distance = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position);
+        lanternLight.enabled = distance <= 10f; 
+        if(lanternLight.enabled && !sound)
+        {
+            lanternLight.gameObject.GetComponent<AudioSource>().Play();
+            sound = true;
+        }
+        else if (!lanternLight.enabled)
+            sound = false;
     }
 
     IEnumerator CustomUpdate()
     {
-        float distance = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position);
         if (distance <= 7f && !asource.isPlaying)
         {
             if (NemoNestCounter.passed)
@@ -49,7 +65,7 @@ public class VoiceLinesJosh : MonoBehaviour
                 }
                 else
                 {
-                    if(Zone.maxZoneID < 12 && introLinesB && tutorialLines < clipsTutorial.Length)
+                    if (Zone.maxZoneID < 12 && introLinesB && tutorialLines < clipsTutorial.Length)
                     {
                         StartCoroutine(PlayLine(clipsTutorial[tutorialLines]));
                         tutorialLines++;
