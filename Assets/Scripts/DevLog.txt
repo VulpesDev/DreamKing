@@ -47,12 +47,15 @@ V Lights light up sequence
 V Organise folders
 V Organise Scenes
 
+
+V Texture corridor too small scale
+V Change start room in level scene
+V Don't forget OC in the end Ceco
+
 Optimize code (remove coroutines somehow) // AJ
-Change Jump Sound
-Texture corridor too small scale
-Change start room in level scene
-Don't forget OC in the end Ceco
-Main Menu UI sizing fix
+X Change Jump Sound
+V Main Menu UI sizing fix
+V Speed run mode.
 
 V Lower Light turn on sound
 
