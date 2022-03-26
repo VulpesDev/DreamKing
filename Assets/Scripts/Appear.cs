@@ -14,7 +14,7 @@ public class Appear : MonoBehaviour
     void FixedUpdate()
     {
         float dist = Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position);
-        if(StartVoice.ready && GetComponent<Renderer>().isVisible && dist <= 5 && !once)
+        if(StartVoice.ready && GetComponent<Renderer>().isVisible && dist <= 3 && !once)
         {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
             gameObject.transform.GetChild(1).gameObject.SetActive(true);
