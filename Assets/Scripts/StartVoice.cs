@@ -6,6 +6,7 @@ public class StartVoice : MonoBehaviour
 {
     AudioSource aus;
     public static bool ready;
+    public GameObject wall;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +18,11 @@ public class StartVoice : MonoBehaviour
     void Voice()
     {
         aus.Play();
-        Invoke("Ready", 5f);
+        Invoke("Ready", 6.5f);
     }
     void Ready()
     {
         ready = true;
+        wall.SetActive(false);
     }
 }
