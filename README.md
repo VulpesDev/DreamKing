@@ -7,3 +7,10 @@ You can play the game <a href="https://vulpesdev.itch.io/dream-king">here</a><su
 
 # Description
 You wake up feeling hungry for a pickle! In your way to the kitchen something strange happens and you find yourself in an unknown place. The only way for you to get the pickle you were searching for is to jump and climb the mysterious tower!
+
+<div style="max-width: 100%; overflow: hidden;">
+  <img src="imgs/pickle.gif" alt="Gameplay" style="width: 80%; flex: 1;">
+  <img src="imgs/Josh.png" alt="Old Joshmyb" style="width: 30%; flex: 1;">
+  <img src="imgs/Bridge.png" alt="Bridge" style="width: 30%; flex: 1;">
+  <img src="imgs/Tunnel.png" alt="Tunnel" style="width: 30%; flex: 1;">
+</div>
