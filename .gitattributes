@@ -1,7 +1,7 @@
 # Unity Git Setup
 # Line Endings, CRLF,LF.
 
-*.cs linguist-detectable=false
+*.shader linguist-detectable=false
 
 ## CSharp
 *.cs text diff=csharp
