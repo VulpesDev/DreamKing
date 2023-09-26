@@ -1,5 +1,8 @@
 # Unity Git Setup
 # Line Endings, CRLF,LF.
+
+*.ShaderLab linguist-detectable=false
+
 ## CSharp
 *.cs text diff=csharp
 *.xaml    text
